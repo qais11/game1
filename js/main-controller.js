@@ -1,4 +1,4 @@
 angular.module('myGame')
-.controller('main-controller',function($scope, mainService ){
-$scope.test = mainService.test
+.controller('main-controller',function($scope, mainService,$state ){
+$scope.goToPlay = mainService.goToPlay
 });

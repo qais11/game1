@@ -1,5 +1,7 @@
 angular.module('myGame')
-.service('mainService', function(){
-    this.test = 'hi from the service';
+.service('mainService', function($state){
+    this.goToPlay = function(){
+        $state.go('game')
+    }
 });
     
