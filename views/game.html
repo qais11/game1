@@ -1,10 +1,13 @@
 <div class="main-div">
     <div class="choices-btns">
-        <button id="rock" ng-click="testFunc()">Rock</button>
+        <!-- <button id="rock" ng-click="testFunc()">Rock</button>
         <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <button id="scissors">Scissors</button> -->
+        <input id="rock" type="button" ng-value="rock" ng-model="rock" ng-click='getVal("rock")'>
     </div>
     <div class="img-container">
+        <img ng-src="{{imgSrc}}" alt="">
         
     </div>
+
 </div>
