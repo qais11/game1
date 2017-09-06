@@ -3,11 +3,18 @@
         <!-- <button id="rock" ng-click="testFunc()">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button> -->
-        <input id="rock" type="button" ng-value="rock" ng-model="rock" ng-click='getVal("rock")'>
+        <input id="rock" type="button" value="rock" ng-model="rock" ng-click='getVal("rock")'>
+        <input id="paper" type="button" value="paper" ng-model="paper" ng-click='getVal("paper")'>
+        <input id="scissors" type="button" value="scissors" ng-model="scissors" ng-click='getVal("scissors")'>
     </div>
-    <div class="img-container">
-        <img ng-src="{{imgSrc}}" alt="">
-        
-    </div>
+        <div class="middle-container">
+            <div class="img-container">
+                <img ng-src="{{imgSrc}}" alt=""> 
+            </div>
+            <h1>VS</h1>
+            <div class="img-container">
+                <img ng-src="{{}}" alt="">
+            </div>
+        </div>
 
 </div>
