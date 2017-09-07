@@ -1,18 +1,26 @@
 angular.module('myGame')
 .service('mainService', function($state){
-    this.goToPlay = function(){
-        $state.go('game');
-    };
-    var gameData = {
-        rock: '../assets/r.jpg',
+    this.gameData = {
+        rock:'../assets/r.jpg',
         paper:'../assets/p.jpg',
         scissors:'../assets/s.jpg'
     };
-    this.getVal = function(str) {
-        if(!str) {
+    this.score = 0;
+
+    this.goToPlay = function(){
+        $state.go('game');
+    };
+    this.getVal = function(key) {
+        if(!key) {
             return
         }
-        this.imgSrc = gameData[str]
+        this.imgSrc = this.gameData[key]
     };
-});
     
+    this.pickRandomVal = function(obj) {
+        var keys = Object.keys(obj)
+        var key = obj[keys[ keys.length * Math.random() << 0]]
+        this.randomVal = key
+    };
+    
+});

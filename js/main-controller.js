@@ -3,7 +3,9 @@ angular.module('myGame')
 $scope.goToPlay = mainService.goToPlay;
 
 $scope.imgSrc = '../assets/all.jpg';
-
+$scope.randomVal = '../assets/all.jpg';
+$scope.gameData = mainService.gameData;
 $scope.getVal = mainService.getVal;
-
+$scope.pickRandomVal = mainService.pickRandomVal;
+$scope.score = mainService.score;
 });

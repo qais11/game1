@@ -3,18 +3,25 @@
         <!-- <button id="rock" ng-click="testFunc()">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button> -->
-        <input id="rock" type="button" value="rock" ng-model="rock" ng-click='getVal("rock")'>
-        <input id="paper" type="button" value="paper" ng-model="paper" ng-click='getVal("paper")'>
-        <input id="scissors" type="button" value="scissors" ng-model="scissors" ng-click='getVal("scissors")'>
+        <input id="rock" type="button" value="rock" ng-model="rock" ng-click='getVal("rock"); pickRandomVal(gameData)'>
+        <input id="paper" type="button" value="paper" ng-model="paper" ng-click='getVal("paper"); pickRandomVal(gameData)'>
+        <input id="scissors" type="button" value="scissors" ng-model="scissors" ng-click='getVal("scissors"); pickRandomVal(gameData)'>
     </div>
         <div class="middle-container">
             <div class="img-container">
-                <img ng-src="{{imgSrc}}" alt=""> 
+                <img ng-src="{{imgSrc}}" alt=""> <br>
+                <p>You</p>
             </div>
-            <h1>VS</h1>
+            <div class="vs-text"><h1>VS</h1></div>
             <div class="img-container">
-                <img ng-src="{{}}" alt="">
+                <img ng-src="{{randomVal}}" alt=""> <br>
+                <p>Bot</p>
             </div>
+        </div>
+        <div class="score-container">
+            
+                 <p>Score: {{score}}</p>
+                 
         </div>
 
 </div>
