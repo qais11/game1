@@ -1,8 +1,9 @@
 <div class="main-div">
     <div class="timer-container">
+        <input type="text" value="0" ng-model="timer">
         <p>Timer: {{timer}}</p>
     </div>
-    <button ng-click="count('{{timer}}')">play</button>
+    
     <div class="choices-btns">
         <input id="rock" type="button" value="rock" ng-model="rock" ng-click='getVal("rock"); pickRandomVal(gameData)'>
         <input id="paper" type="button" value="paper" ng-model="paper" ng-click='getVal("paper"); pickRandomVal(gameData)'>

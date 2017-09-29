@@ -1,12 +1,11 @@
 angular.module('myGame')
-.service('mainService', function($state){
+.service('mainService', function($state , $rootScope){
     this.gameData = {
         rock:'../assets/r.jpg',
         paper:'../assets/p.jpg',
         scissors:'../assets/s.jpg'
     };
     this.score = 0;
-    this.timer = 50;
     this.goToPlay = function(){
         $state.go('game');
     };
@@ -22,13 +21,13 @@ angular.module('myGame')
         var key = obj[keys[ keys.length * Math.random() << 0]]        
         this.randomVal = key
     };
-    this.count = function(num){
-        for(var i = 0 ; i <= num; i++){ 
-            if(num!== 0){
-                num --
-            }
-        }
-        return this.count(num -1)
-    }
-    
+    var self = this
+   
+    // this.count = function(timer){
+    //     setInterval(function(){
+    //         console.log('fired')
+    //         timer++
+    //     }, 1000)
+    // }
+   
 });

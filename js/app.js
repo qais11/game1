@@ -3,11 +3,13 @@ angular.module('myGame', ['ui.router'])
     $stateProvider
         .state('welcome', {
             url:'/',
-            templateUrl: "../views/welcome.html",
+            templateUrl: "../views/welcome.html"
+
           })
           .state('game', {
             url:'/game',
             templateUrl: "../views/game.html",
+            
           })
           $urlRouterProvider
 .otherwise('/');
