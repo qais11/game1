@@ -18,6 +18,5 @@ $scope.count = function(num){
         console.log($scope.timer)
     }, 1000)
 
-   
 }
 });

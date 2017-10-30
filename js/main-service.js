@@ -23,11 +23,8 @@ angular.module('myGame')
     };
     var self = this
    
-    // this.count = function(timer){
-    //     setInterval(function(){
-    //         console.log('fired')
-    //         timer++
-    //     }, 1000)
-    // }
+    this.getScore = function(){
+        
+    }
    
 });
